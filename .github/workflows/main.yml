@@ -1,0 +1,20 @@
+name: First CI
+
+on: 
+  push:
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout 
+        uses: actions/checkout@v4
+
+      - name: Set up SDK
+        uses: subosito/flutter-action@v2
+        with:
+          channel: Stable
+
+      - name: Pub get
+        run: flutter pub get
