@@ -5,7 +5,7 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized(); // imp for notifications
   runApp(const MainState());
 }
-
+// This is the widget
 class MainState extends StatelessWidget {
   const new({super.key});
 
