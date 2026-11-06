@@ -2,6 +2,7 @@ name: First CI
 
 on: 
   push:
+  pull_request:
 
 jobs:
   setup:

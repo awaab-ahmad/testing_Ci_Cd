@@ -5,7 +5,10 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized(); // imp for notifications
   runApp(const MainState());
 }
-// This is the widget
+
+// Now this will move to the new branch that will merge later
+
+
 class MainState extends StatelessWidget {
   const new({super.key});
 
