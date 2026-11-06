@@ -14,7 +14,7 @@ jobs:
       - name: Set up SDK
         uses: subosito/flutter-action@v2
         with:
-          channel: Stable
+          channel: stable
 
       - name: Pub get
         run: flutter pub get
