@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:test_2/views/screens/notification_check.dart';
 import 'package:test_2/views/screens/user_api.dart';
+import 'package:test_2/controller/state_manage.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized(); // imp for notifications
@@ -14,6 +16,8 @@ class MainState extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: UserListScreen());
+    return ChangeNotifierProvider(
+      create: (context) => StateManage(),
+      child: const MaterialApp(home: UserListScreen()));
   }
 }
