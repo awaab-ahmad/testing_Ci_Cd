@@ -19,3 +19,6 @@ jobs:
 
       - name: Pub get
         run: flutter pub get
+
+      - name: Run Tests
+        run: flutter test
