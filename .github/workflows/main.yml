@@ -9,16 +9,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout 
+      - name: Setting up of the cloud virtual machine 
         uses: actions/checkout@v4
 
-      - name: Set up SDK
+      - name: Set up SDK on the cloud engine
         uses: subosito/flutter-action@v2
         with:
           channel: stable
+          cache: True
 
-      - name: Pub get
+      - name: Run pub get command 
         run: flutter pub get
 
-      - name: Run Tests
+      - name: Run the test files
         run: flutter test
