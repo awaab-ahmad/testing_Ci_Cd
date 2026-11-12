@@ -5,7 +5,7 @@ on:
   pull_request:
 
 jobs:
-  early_setup:
+  setup:
     runs-on: ubuntu-latest
 
     steps:
