@@ -5,7 +5,7 @@ on:
   pull_request:
 
 jobs:
-  setup:
+  early_setup:
     runs-on: ubuntu-latest
 
     steps:
@@ -18,8 +18,8 @@ jobs:
           channel: stable
           cache: True
 
-      - name: Run pub get command 
+      - name: Run the Flutter pub get
         run: flutter pub get
 
-      - name: Run the test files
+      - name: Run the Flutter tests
         run: flutter test
