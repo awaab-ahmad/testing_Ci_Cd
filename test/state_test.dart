@@ -28,13 +28,24 @@ void main() {
     test(
       'When the function is called, the new elements should be assigned to it',
       () {
-      late String name;
-       object.addListener(() => name = object.name);
-       object.changeValue('Asfar Ahmad', 20);
-       expect(name, 'Asfar Ahmad');
+        late String name;
+        object.addListener(() => name = object.name);
+        object.changeValue('Asfar Ahmad', 20);
+        expect(name, 'Asfar Ahmad');
       },
     );
 
-    
+    // making the testing function of async thing
+    test('when async func is called, it will wait for one minute then will make the change name', () async {
+      int count = 0;
+      late String name;
+      object.addListener(() {
+        count++;
+        name = object.name;
+      });
+      await object.changeAsyncName('Awaab Ahmad Minhas');
+      expect(count, 1);
+      expect(name, 'Awaab Ahmad Minhas');
+    });
   });
 }
