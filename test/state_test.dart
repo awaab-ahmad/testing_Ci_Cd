@@ -43,9 +43,9 @@ void main() {
         count++;
         name = object.name;
       });
-      await object.changeAsyncName('Awaab Ahmad Minhas');
+      await object.changeAsyncName('Awaab Ahmad');
       expect(count, 1);
-      expect(name, 'Awaab Minhas');
+      expect(name, 'Awaab Ahmad');
     });
   });
 }
