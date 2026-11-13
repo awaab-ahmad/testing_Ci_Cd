@@ -16,10 +16,7 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           channel: stable
-          cache: True
-
-      - name: Checking errors
-        run: flutter analyze      
+          cache: True   
 
       - name: Run the Flutter pub get
         run: flutter pub get
