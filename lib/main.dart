@@ -18,6 +18,7 @@ class MainState extends StatelessWidget {
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
       create: (context) => StateManage(),
-      child: const MaterialApp(home: UserListScreen()));
+      child: const MaterialApp(home: UserListScreen()),
+    );
   }
 }
