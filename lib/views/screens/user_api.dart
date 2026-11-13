@@ -1,8 +1,8 @@
 // lib/main.dart
 import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-
 
 class User {
   final int id;
@@ -47,9 +47,7 @@ class ApiService {
     }
 
     final List<dynamic> data = jsonDecode(response.body) as List<dynamic>;
-    return data
-        .map((e) => User.fromJson(e as Map<String, dynamic>))
-        .toList();
+    return data.map((e) => User.fromJson(e as Map<String, dynamic>)).toList();
   }
 }
 
@@ -162,4 +160,3 @@ class _UserListScreenState extends State<UserListScreen> {
     );
   }
 }
-

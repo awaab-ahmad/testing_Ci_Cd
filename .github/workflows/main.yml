@@ -16,10 +16,13 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           channel: stable
-          cache: True
+          cache: True   
 
       - name: Run the Flutter pub get
         run: flutter pub get
+
+      - name: Running the dart formatter
+        run: dart format --set-exit-if-changed .
 
       - name: Run the Flutter tests
         run: flutter test
