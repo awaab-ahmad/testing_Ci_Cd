@@ -18,8 +18,14 @@ jobs:
           channel: stable
           cache: True
 
+      - name: Checking errors
+        run: flutter analyze      
+
       - name: Run the Flutter pub get
         run: flutter pub get
+
+      - name: Running the dart formatter
+        run: dart format --set-exit-if-changed .
 
       - name: Run the Flutter tests
         run: flutter test
