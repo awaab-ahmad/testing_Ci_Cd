@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:test_2/views/screens/notification_check.dart';
 import 'package:test_2/views/screens/user_api.dart';
 import 'package:test_2/controller/state_manage.dart';
 
