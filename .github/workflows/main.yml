@@ -51,7 +51,7 @@ jobs:
         run: flutter build apk --split-per-abi
 
       - name: Uploading the Files to Cloud
-        uses: actions/uplaod-artifact@v4
+        uses: actions/upload-artifact@v4
         with: 
           name: Released Apks
           path: build/app/outputs/flutter-apk/
