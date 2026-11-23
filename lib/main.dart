@@ -2,7 +2,7 @@ import 'package:material_ui/material_ui.dart';
 import 'package:provider/provider.dart';
 import 'package:test_2/controller/state_manage.dart';
 import 'package:test_2/views/screens/kotlin_show.dart';
-import 'package:test_2/views/screens/logic_check.dart';
+
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized(); // imp for notifications
@@ -17,7 +17,7 @@ class MainState extends StatelessWidget {
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
       create: (context) => StateManage(),
-      child: const MaterialApp(home: LogicCheckingWork()),
+      child: const MaterialApp(home: KotlinHello()),
     );
   }
 }

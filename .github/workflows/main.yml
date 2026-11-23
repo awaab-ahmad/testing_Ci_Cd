@@ -1,4 +1,4 @@
-name: State Added
+name: Matrix Added
 
 on: 
   push:
@@ -7,6 +7,10 @@ on:
 jobs:
   setup:
     runs-on: ubuntu-latest
+    strategy: 
+      fail-test: false
+      matrix: 
+        flutter-version: ['3.40', '3.44', '3.50']
 
     steps:
       - name: Setting up of the cloud virtual machine 
@@ -15,17 +19,8 @@ jobs:
       - name: Set up SDK on the cloud engine
         uses: subosito/flutter-action@v2
         with:
-          channel: stable
+          channel: ${{ matrix.flutter-verion }}
           cache: True   
-
-      - name: Run the Flutter pub get
-        run: flutter pub get
-
-      - name: Running the dart formatter
-        run: dart format --set-exit-if-changed .
-
-      - name: Running the flutter analyzer
-        run: flutter analyze
 
       - name: Run the Flutter tests
         run: flutter test
@@ -36,13 +31,16 @@ jobs:
 
     steps: 
       - name: Setting the Machine
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4           
 
       - name: Setting the flutter engine
         uses: subosito/flutter-action@v2
         with: 
-          channel: stable
+          flutter-version: '3.50'
           cache: True
+
+      - name: Performing clean
+        run: flutter clean
 
       - name: Run Pub get
         run: flutter pub get

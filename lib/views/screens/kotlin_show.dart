@@ -20,6 +20,22 @@ class KotlinHello extends StatelessWidget {
             },
             child: Text('Press to reveal'),
           ),
+          const SizedBox(height: 10),
+          ElevatedButton(
+            onPressed: () async {
+              final res = await channel.invokeMethod('Say Hello');
+              if (kDebugMode) print(res);
+            },
+            child: Text('Ask Hello'),
+          ),
+          const SizedBox(height: 10),
+          ElevatedButton(
+            onPressed: () async {
+              final res = await channel.invokeMethod('To the Future ');
+              if (kDebugMode) print(res);
+            },
+            child: Text('Future'),
+          ),
         ],
       ),
     );
