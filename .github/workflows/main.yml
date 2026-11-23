@@ -8,7 +8,7 @@ jobs:
   setup:
     runs-on: ubuntu-latest
     strategy: 
-      fail-test: false
+      fail-fast: false
       matrix: 
         flutter-version: ['3.40', '3.44', '3.50']
 
