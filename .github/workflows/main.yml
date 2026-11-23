@@ -19,7 +19,7 @@ jobs:
       - name: Set up SDK on the cloud engine
         uses: subosito/flutter-action@v2
         with:
-          channel: ${{ matrix.flutter-version }}
+          flutter-version: ${{ matrix.flutter-version }}
           cache: True   
 
       - name: Run the Flutter tests
