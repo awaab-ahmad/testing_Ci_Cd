@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:test_2/controller/state_manage.dart';
 import 'package:test_2/views/screens/kotlin_show.dart';
 
+
 void main() {
   WidgetsFlutterBinding.ensureInitialized(); // imp for notifications
   runApp(const MainState());
