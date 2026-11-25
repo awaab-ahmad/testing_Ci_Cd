@@ -48,8 +48,9 @@ jobs:
       - name: Build the app in formats
         run: flutter build apk --split-per-abi
 
-      - name: Uploading the Files to Cloud
+      - name: Uploading the app
         uses: actions/upload-artifact@v4
         with: 
           name: Released Apks
           path: build/app/outputs/flutter-apk/
+
