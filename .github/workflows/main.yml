@@ -10,7 +10,7 @@ jobs:
     strategy: 
       fail-fast: false
       matrix: 
-        flutter-version: ['3.40', '3.44', '3.50']
+        flutter-version: ['3.48', '3.49', '3.50']
 
     steps:
       - name: Setting up of the cloud virtual machine 
